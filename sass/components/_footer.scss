@@ -1,0 +1,38 @@
+#footer{
+	padding: 30px 0;
+	color: white;
+	text-align:center;
+	h4{
+		color: $gold;
+		margin-bottom: 10px;
+	}
+	a:link, a:visited{
+		color: white;
+	}
+	a.social{
+		display: block;
+		width:45px;
+		height:45px;
+		@include transition (all .2s ease-in-out);
+		@include abs-pos(0,auto,auto,0);
+		&.twitter{
+			@include abs-pos(0,0,auto,auto);
+		}
+		img{
+			@include fit-grid(width);
+		}
+		&:hover,&:active{
+			@include opacity(.8);
+		}
+	}
+	p{
+		margin:0;
+		a:link,a:visited{
+			margin:0 10px;
+			@include transition (all .2s ease-in-out);
+		}
+		a:hover,a:active{
+			color:darken( white, 20% );
+		}
+	}
+}

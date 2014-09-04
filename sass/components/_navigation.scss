@@ -1,0 +1,89 @@
+nav#page-nav{
+	@extend .clearfix;
+	.home &{
+		padding: 20px 0;
+	}
+	.link{
+		padding:20px;
+		@include span-columns(4);
+		.home &.contact{
+			@include shift(2);
+		}
+		.home &.directions{
+			@include omega;
+		}
+		a{
+			display: block;
+			overflow:hidden;
+			position: relative;
+			&:before{
+				content:"";
+				display: block;
+				padding-top:100%;
+			}
+			.circle{
+				@include abs-pos(0,0,0,0);
+				@include border-radius(50%);
+				@include transition (background-color .2s ease);
+				.icon{
+					display: inline-block;
+					width:136px;
+					height:136px;
+					@include abs-pos(50%,auto,auto,50%);
+					margin-top:-68px;
+					margin-left:-68px;
+					text-align: center;
+					@include transition (all .2s ease-in-out);
+					/*-webkit-transition: all .2s ease;
+					-moz-transition: all .2s ease;
+					-o-transition: all .2s ease;
+					transition: all .2s ease;*/
+					img{
+						@include fit-grid(height);
+						display: inline-block;
+						@extend %centered;
+					}
+				}
+			}
+			&:hover .icon{
+				@include transform(scale(1.05));
+				/*-webkit-transform: scale(1.05);
+     			-moz-transform: scale(1.05);
+     			-ms-transform: scale(1.05);
+     			-o-transform: scale(1.05);
+     			transform: scale(1.05); 
+     			*/
+			}
+		}
+		&.who-we-are a .circle{
+			background-color: $who;
+		}
+		&.who-we-are a:hover .circle{
+			background-color:lighten( $who, 5% );
+		}
+		&.menu a .circle{
+			background-color: $menu;
+		}
+		&.menu a:hover .circle{
+			background-color:lighten( $menu, 5% );
+		}
+		&.directions a .circle{
+			background-color: $directions;
+		}
+		&.directions a:hover .circle{
+			background-color:lighten( $directions, 5% );
+		}
+		&.contact a .circle{
+			background-color: $contact;
+		}
+		&.contact a:hover .circle{
+			background-color:lighten( $contact, 5% );
+		}
+		&.gallery a .circle{
+			background-color: $gallery;
+		}
+		&.gallery a:hover .circle{
+			background-color:lighten( $gallery, 5% );
+		}
+	}
+}

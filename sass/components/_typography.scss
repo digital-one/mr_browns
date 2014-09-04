@@ -1,0 +1,8 @@
+h1,h2,h3,h4{
+	font-family:$at_bold;
+	font-weight:normal;
+	@include font-size(20);
+	line-height:100%;
+	margin:0 0 20px;
+	letter-spacing: 0.5px;
+}

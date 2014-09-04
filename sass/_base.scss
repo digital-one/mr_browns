@@ -1,0 +1,19 @@
+html{
+	font-size: 62.5%;
+}
+body{
+	font-family: $at_medium;
+	@include font-size(21);
+	line-height: 130%;
+	color: #333;
+	@extend %reset-spacing;
+	background-color:#000;
+}
+a{
+	&:link, &:visited{
+	text-decoration: none;
+	}
+	&:hover, &:active{
+
+	}
+}

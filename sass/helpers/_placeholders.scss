@@ -1,0 +1,27 @@
+%no-list{
+	list-style-type: none;
+}
+%full-width{
+	display: block;
+	width: 100%;
+}
+%centered{
+	margin:0 auto;
+	position: relative;
+}
+%fit-grid{
+	@include fill-parent;
+	height:auto;
+}
+%reset-spacing{
+	margin:0;
+	padding:0;
+}
+%bg-cover{
+	background-position: center center;
+	background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}

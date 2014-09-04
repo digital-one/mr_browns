@@ -1,0 +1,18 @@
+#header{
+	@extend %full-width;
+	@extend %bg-cover;
+	background-image:url('../images/header-bg.jpg');
+	text-align:center;
+	position:relative;
+	padding:17px 0 26px;
+	#home-link{
+		width:193px;
+		height:71px;
+		display:inline-block;
+		@extend %centered;
+		
+		img{
+			@include fit-grid(width);
+		}
+	}
+}
